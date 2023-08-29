@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone henter</title>
+
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <header class="w-2/3 mx-auto">
+        <div class="searchSEction flex p-8 ">
+            <input id="srcFild" type="text" placeholder="Type here" class="input input-bordered w-full " />
+
+            <button onclick="srcBtn();" class="btn btn-outline">Search</button>
+
+        </div>
+    </header>
+
+    <main>
+        <div id="loadSpner" class="loadSpner py-20 text-center hidden">
+            <span class="p-4 text-1xl text-slate-600	" class="loading loading-bars loading-lg"></span>">
+
+        </div>
+        <section id="phoneContainer" class="grid grid-cols-1 lg:grid-cols-3
+        md:grid-cols-2 gap-2 mx-auto py-10 lg:px-28">
+            <!-- <div class="card bg-base-100 shadow-xl">
+                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div> -->
+
+              <!-- dynamicly added -->
+
+              
+        </section><!-- Open the modal using ID.showModal() method -->
+            <dialog id="show_details" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <div id="detailsContainer">
+                    <!--  
+                    <div class="mx-auto text-center productTlt">
+                        <figure class="product-img py-8 ">
+                            <img src="" alt="products">
+                        </figure>
+                        
+                        <h3 class="heading text-2xl py-2">Galaxy A13 5G
+                        </h3>
+                    </div>
+
+                    <div class="product-body capitalize">
+                        <p class="py-2 border border-gray-"><span class="p-4 text-1xl text-slate-600">chipSet: </span></p>
+                        <p class="py-2 bg-gray-200 border border-gray-400"><span class="p-4 text-1xl text-slate-600	">displaySize : </span></p>
+                        <p class="py-2 border border-gray-400"><span class="p-4 text-1xl text-slate-600	">memory : </span></p>
+                        <p class="py-2 bg-gray-200 border border-gray-400"><span class="p-4 text-1xl text-slate-600	">sensors :</span></p>
+                        <p class="py-2 border border-gray-400"><span class="p-4 text-1xl text-slate-600	">storage :</span></p>
+                    </div>
+                    -->
+
+                </div>
+                <div class="modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+                </div>
+            </form>
+            </dialog>
+        <!-- show  all products  -->
+        <div id="showAllSection" onclick="showAllBtn();" class="showAllSection p-12 text-center hidden">
+            <button class="btn btn-outline btn-info">Show All</button>
+
+        </div>
+    </main>
+    
+
+    <!-- scrpt -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
